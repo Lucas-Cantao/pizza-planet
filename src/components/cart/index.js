@@ -61,8 +61,7 @@ export default function Cart(){
         setTotalValue(total.toFixed(2).toString().replace('.', ','));
     }, [pizzas, refri]);
 
-    function enviarPedido(e){
-        e.preventDefault()
+    function enviarPedido(){
         let message = 'Pedido%0A'
         pizzas.forEach((pizza) => {
             message += `
