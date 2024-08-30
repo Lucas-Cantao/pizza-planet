@@ -1,0 +1,39 @@
+*
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: fonteToyStory;
+}
+
+body
+
+{
+    padding-bottom: 50px;
+}
+
+.title
+
+{
+    color: #1b29a6;
+}
+
+.alert
+
+{
+    top: 85%;
+    background: #1b29a6;
+    left: 50%;
+    color: #ebee93;
+    transform: translateX(-50%);
+    transition: .3s ease;
+    z-index: 1;
+    scale: 0;
+}
+
+.alert i
+
+{
+    color: rgb(30, 255, 0);
+}

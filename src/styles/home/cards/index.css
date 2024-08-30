@@ -1,0 +1,44 @@
+.images
+
+{
+    justify-content: space-evenly;
+}
+
+.images .image img
+
+{
+    width: 20vw;
+    height: 15vw;
+    animation: pulse 2s ease infinite;
+    border-radius: 7%;
+    
+}
+
+.images .image:nth-child(2) img {
+    animation-delay: .15s;
+}
+
+.images .image:nth-child(3) img {
+    animation-delay: .3s;
+}
+
+.images .image:nth-child(4) img {
+    animation-delay: .45s;
+}
+
+@keyframes pulse {
+    0%
+    {
+        scale: 1;
+    }
+    50%
+    {
+        scale: 1.02;
+    }
+    100%
+    {
+        scale: 1;
+    }
+}
+
+

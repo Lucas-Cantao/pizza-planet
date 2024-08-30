@@ -1,0 +1,79 @@
+::-webkit-scrollbar
+
+{
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-thumb
+
+{
+    background: #1b29a6;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track
+
+{
+    background: #fff;
+}
+
+.card-pizza
+
+{
+    transition: .2s ease-out;
+}
+
+.card-pizza:hover
+
+{
+    scale: 1.07;
+}
+
+
+
+.card-pizza img
+
+{
+    width: 15vw;
+    height: 10vw;
+    border-radius: 1.5vw;
+}
+
+.card-pizza p, .card-pizza span
+
+{
+    font-size: clamp(4px, calc(1vh + 1vw), 17px);
+}
+
+.card-pizza span
+
+{
+    color: #969f6a;
+}
+
+.card-pizza button
+
+{
+    background: #eaee99;
+    color: #1b29a6;
+    border: none;
+    padding: .4vw;
+    font-size: clamp(4px, calc(1vh + 1vw), 12px);
+}
+
+@media (width < 768px) {
+    .card-pizza img
+
+    {
+        width: 30vw;
+        height: 20vw;
+    }
+
+    ::-webkit-scrollbar
+
+    {
+        width: .7vw;
+        height: .7vw;
+    }
+}

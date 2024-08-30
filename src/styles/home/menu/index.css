@@ -1,0 +1,81 @@
+@import url(../../fontes.css);
+
+.left-0
+
+{
+    left: 0;
+}
+
+.search-result
+
+{
+    background: #1b29a6;
+    position: absolute;
+    z-index: 1;
+    border-radius: 1vw;
+}
+
+.search-result .pizza-search img
+
+{
+    width: 40%;
+    border-radius: 1vw;
+}
+
+.search-result .pizza-search
+
+{
+    color: #ebee93;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-result .pizza-search button
+
+{
+    background: #ebee93;
+    border: none;
+    padding: 1vw 2vw;
+    border-radius: 1vw;
+}
+
+div .input-menu
+
+{
+    background: #ebee93;
+    position: relative;
+}
+
+#input-search
+
+{
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+div .img
+
+{
+    width: 4vw;
+    height: 4vw;
+}
+
+
+
+@media (width <= 768px) {
+    .w-md-100
+
+    {
+        width: 100%;
+    }
+
+    div .img
+
+    {
+        width: 4vw;
+        height: 4vw;
+        min-width: 30px;
+        min-height: 44px;
+    }
+}
