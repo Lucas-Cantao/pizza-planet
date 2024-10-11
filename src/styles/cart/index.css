@@ -19,30 +19,6 @@
     color: #969f6a;
 }
 
-.input-check input
-
-{
-    border: 1px solid #1b29a6;
-}
-
-
-.form-payment select
-
-{
-    color: #1b29a6;
-    border: 1px solid #1b29a6;
-    outline: none;
-}
-
-.endOrder
-
-{
-    background: #eaee99;
-    border: none;
-    color: #1b29a6;
-    border-radius: .4vw;
-    padding: 1vw;
-}
 
 @media (width < 998px) {
     .pizzasFav .pizzaFav img

@@ -1,6 +1,7 @@
 import '../../../styles/home/menu/index.css'
 import logo from '../../../assets/logo.png'
-import pizzas from '../carrocelPizzas/Pizzas'
+import logoGiocatolli from '../../../assets/logo_.png'
+import { pizzas } from '../carrocelPizzas/Pizzas'
 import { addToCart } from '../carrocelPizzas/CardPizza'
 import {useEffect, useState} from 'react'
 
@@ -24,7 +25,10 @@ export default function Menu(){
 
     return (
         <div className="container-sm justify-content-between d-flex flex-wrap gap-3 mt-3">
-            <p className="title fs-1 my-auto order-1 flex-grow-1">Menu</p>
+            <div className='d-flex order-1 flex-grow-1'>
+                <img src={logoGiocatolli} alt="" className='logo-giocatolli'/>
+                <p className="title fs-1 my-auto">Menu</p>
+            </div>
             <label className="my-auto px-3 order-3 order-md-2 w-md-100 rounded-pill d-flex input-menu">
                 <i className="bi bi-search pe-3 my-auto cursor-pointer"></i>
                 <input

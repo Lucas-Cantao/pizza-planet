@@ -1,19 +1,30 @@
-import calabresaBG from '../../../assets/pizza-calabresa.jpeg'
-import mussarelaBG from '../../../assets/pizza-mussarela.jpg'
-import portuguesaBG from '../../../assets/pizza-portuguesa.jpg'
-import frangoCatupiryBG from '../../../assets/pizza-frango-catupiry.jpg'
-import quatroQueijosBG from '../../../assets/pizza-quatro-queijos.jpg'
-import peperoneBG from '../../../assets/pizza-peperone.jpg'
-import supremeBG from '../../../assets/pizza-supreme.jpg'
-import espanholaBG from '../../../assets/pizza-espanhola.jpg'
-import margueritaBG from '../../../assets/pizza-marguerita.jpg'
+import mussarelaBG from '../../../assets/mussarela.png'
+import calabresaBG from '../../../assets/calabresa.png'
+import chocolateMorangoBG from '../../../assets/chocolate-morango.png'
+import chocolateUvaBG from '../../../assets/chocolate-uva.png'
+import chocolatePrestigioBG from '../../../assets/chocolate-prestigio.png'
+import calabresaCatupiryBG from '../../../assets/calabresa-catupiry.png'
+import calabresaMussarelaBG from '../../../assets/calabresa-queijo.png'
+import frangoCatupiryBG from '../../../assets/frango-catupiry.png'
 
-
-const pizzas = [
+const pizzasSalgadas = [
+    
+    {
+        background: mussarelaBG,
+        name: 'Buzz - Mussarela',
+        price: 8.00,
+        ingredientes: [
+            'Mussarela',
+            'Tomate em rodelas',
+            'Cebola',
+            'Azeitona'
+        ],
+        quantidade: 1
+    },
     {
         background: calabresaBG,
-        name: 'Calabresa',
-        price: 39.99,
+        name: 'Woody - Calabresa',
+        price: 8.00,
         ingredientes: [
             'Calabresa',
             'Cebola em rodelas',
@@ -21,36 +32,48 @@ const pizzas = [
             'Orégano'
         ],
         quantidade: 1
-    },
+    }    
+]
+
+const pizzasDoces = [
     {
-        background: mussarelaBG,
-        name: 'Mussarela',
-        price: 36.99,
+        background: chocolateMorangoBG,
+        name: 'Betty - Chocolate com morango',
+        price: 9.00,
         ingredientes: [
-            'Mussarela',
-            'Tomate em rodelas',
-            'Orégano'
+            'Chocolate',
+            'Morango'
         ],
         quantidade: 1
     },
     {
-        background: portuguesaBG,
-        name: 'Portuguesa',
-        price: 43.99,
+        background: chocolateUvaBG,
+        name: 'Rex - Chocolate com uva',
+        price: 9.00,
         ingredientes: [
-            'Mussarela',
-            'Presunto',
-            'Ovo cozido',
-            'Tomate em rodela',
-            'Azeitona',
-            'Orégano'
+            'Chocolate',
+            'uva'
         ],
         quantidade: 1
     },
+    {
+        background: chocolatePrestigioBG,
+        name: 'Ao infinito e além - Chocolate com prestígio',
+        price: 9.00,
+        ingredientes: [
+            'Chocolate',
+            'Prestígio'
+        ],
+        quantidade: 1
+    }
+]
+
+const pizzasLimitadas = [
+    
     {
         background: frangoCatupiryBG,
-        name: 'Frango com catupiry',
-        price: 41.99,
+        name: 'Jessie - Frango com catupiry',
+        price: 8.00,
         ingredientes: [
             'Frango',
             'Catupiry'
@@ -58,69 +81,30 @@ const pizzas = [
         quantidade: 1
     },
     {
-        background: quatroQueijosBG,
-        name: 'Quatro queijos',
-        price: 39.99,
+        background: calabresaMussarelaBG,
+        name: 'Forky - Calabresa com mussarela',
+        price: 8.00,
         ingredientes: [
-            'Queijo mussarela',
-            'Queijo gosgonzola',
-            'Queijo prato',
-            'Queijo cheddar',
-            'Orégano',
-            'Mangericão'
-        ],
-        quantidade: 1
-    },
-    {
-        background: peperoneBG,
-        name: 'Peperone',
-        price: 36.99,
-        ingredientes: [
-            'Mussarela',
-            'Peperone'
-        ],
-        quantidade: 1
-    },
-    {
-        background: supremeBG,
-        name: 'Supreme',
-        price: 44.99,
-        ingredientes: [
-            'Peperone',
             'Calabresa',
+            'Mussarela',
             'Cebola em rodelas',
-            'Pimentão verde fatiado',
-            'Azeitona preta fatiada'
+            'Azeitonas'
         ],
         quantidade: 1
     },
     {
-        background: espanholaBG,
-        name: 'Espanhola',
-        price: 43.99,
+        background: calabresaCatupiryBG,
+        name: 'Lotso - Calabresa com catupiry',
+        price: 8.00,
         ingredientes: [
-            'Mussarela',
-            'Calabresa ralada',
-            'Alho tostado',
-            'Tomate em rodelas',
-            'Azeitona',
-            'Orégano'
+            'Calabresa',
+            'Catupiry'
         ],
         quantidade: 1
     },
-    {
-        background: margueritaBG,
-        name: 'Marguerita',
-        price: 42.99,
-        ingredientes: [
-            'Mussarela',
-            'Manjericão',
-            'Tomate em rodelas',
-            'Azeitona',
-            'Orégano'
-        ],
-        quantidade: 1
-    }
+    
 ]
 
-export default pizzas
+const pizzas = [...pizzasSalgadas, ...pizzasDoces, ...pizzasLimitadas]
+
+export { pizzasSalgadas, pizzasDoces, pizzasLimitadas, pizzas }

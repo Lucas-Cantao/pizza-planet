@@ -1,56 +1,26 @@
 @import url(../../fontes.css);
 
-.promocoes, .popular
+.popular
 
 {
-    height: 23vw;
+    width: 50vw;
+    height: 40vw;
     border-radius: 3vw;
     color: white;
     font-family: fonteToyStory;
     overflow: hidden;
     position: relative;
     font-size: clamp(5px, calc(1.2vh + 1.2vw), 25px);
-}
-
-
-.promocoes
-
-{
-    background: url(../../../assets/coca.jpg);
+    background: url(../../../assets/combos.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
-.promocoes::before
-
-{
-    content: '';
-    position: absolute;
-    width: 120%;
-    height: 120%;
-    background: rgba(0, 0, 0, 0.4);
-}
-
-.promocoes p
-
-{
-    z-index: 1;
-}
-
-
-.popular
-
-{
-    background: url(../../../assets/pizza-caseira-destaque.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
 
 
 @media (width < 768px) {
-    .promocoes, .popular
+    .popular
 
     {
         height: 40vw;
