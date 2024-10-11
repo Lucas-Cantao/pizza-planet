@@ -227,7 +227,7 @@ export default function EndOrder() {
                         />
                         <span htmlFor='soda'>Deseja adicionar um copo de refrigerante por apenas R$2,00?</span>
                 </label>
-                <p>Total: R${total.toString().replace('.', ',')}</p>
+                <p>Total: R${total},00</p>
                 {paymentType !== '' &&
                     <button className='endOrder-link' onClick={enviarPedido}>Finalizar pedido</button>
                 }

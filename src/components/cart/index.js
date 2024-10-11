@@ -49,11 +49,11 @@ export default function Cart(){
                                 <img src={pizza.background} alt="" />
                                 <div className="m-3">
                                     <p className="fs-3">{pizza.name}</p>
-                                    <span className="fs-4 price">R${pizza.price.toString().replace('.', ',')}</span>
+                                    <span className="fs-4 price">R${pizza.price},00</span>
                                     <div className="d-flex">
-                                        <i className="bi bi-dash-circle fs-1 title cursor-pointer" onClick={() => updateQuant(index, '-')}></i>
-                                        <p className="my-auto mx-3 fs-4">{pizza.quantidade}</p>
-                                        <i className="bi bi-plus-circle fs-1 title cursor-pointer" onClick={() => updateQuant(index, '+')}></i>
+                                        <i className="bi bi-dash-circle text-black fs-1 title cursor-pointer" onClick={() => updateQuant(index, '-')}></i>
+                                        <p className="my-auto mx-3 fs-4 text-black">{pizza.quantidade}</p>
+                                        <i className="bi bi-plus-circle text-black fs-1 title cursor-pointer" onClick={() => updateQuant(index, '+')}></i>
                                     </div>
                                 </div>
                             </div>
