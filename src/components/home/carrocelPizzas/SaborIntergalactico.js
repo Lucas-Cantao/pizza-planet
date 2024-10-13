@@ -5,9 +5,9 @@ import { addToCart } from './CardPizza'
 
 export default function SaborIntergalactico(){
 
-    const [pizza1, setPizza1] = useState()
-    const [pizza2, setPizza2] = useState()
-    const [bebida,  setBebida] = useState()
+    const [pizza1, setPizza1] = useState('')
+    const [pizza2, setPizza2] = useState('')
+    const [bebida,  setBebida] = useState('')
 
 
     return (

@@ -5,9 +5,9 @@ import { addToCart } from './CardPizza'
 
 export default function DoceAventuraEspacial() {
 
-    const [pizzaDoce1, setPizzaDoce1] = useState()
-    const [pizzaDoce2, setPizzaDoce2] = useState()
-    const [bebida, setBebida] = useState()
+    const [pizzaDoce1, setPizzaDoce1] = useState('')
+    const [pizzaDoce2, setPizzaDoce2] = useState('')
+    const [bebida, setBebida] = useState('')
 
     return (
         <div className="card-combo bg-white m-4 rounded-5 mx-auto">
