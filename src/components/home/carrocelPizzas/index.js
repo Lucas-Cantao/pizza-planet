@@ -1,9 +1,18 @@
 import '../../../styles/home/carrocelPizzas/index.css'
 import CardPizza from './CardPizza'
-import { pizzasSalgadas, pizzasDoces, pizzasLimitadas } from './Pizzas'
+import CardCombo from './CardCombo'
+import { pizzasSalgadas, pizzasDoces, pizzasLimitadas, combos } from './Pizzas'
+
+
+
+import SaborIntergalactico from './SaborIntergalactico'
+import DoceAventuraEspacial from './DoceAventuraEspacial'
+
 
 
 function CarrocelPizzas(){
+
+
     return(
         <>
             <div className="container-sm my-5">
@@ -19,7 +28,7 @@ function CarrocelPizzas(){
                 <p className="title fs-1">Pizzas doces</p>
                 <section className="d-flex flex-nowrap overflow-auto py-3">
                     {pizzasDoces.map((pizza) => (
-                        <CardPizza background={pizza.background} name={pizza.name} price={pizza.price.toString()}/>
+                        <CardPizza background={pizza.background} name={pizza.name} price={pizza.price}/>
                     ))
                 }
                 </section>
@@ -28,9 +37,21 @@ function CarrocelPizzas(){
                 <p className="title fs-1">Pizzas limitadas</p>
                 <section className="d-flex flex-nowrap overflow-auto py-3">
                     {pizzasLimitadas.map((pizza) => (
-                        <CardPizza background={pizza.background} name={pizza.name} price={pizza.price.toString()}/>
+                        <CardPizza background={pizza.background} name={pizza.name} price={pizza.price}/>
                     ))
                 }
+                </section>
+            </div>
+            <div className="container-sm my-5">
+                <p className="title fs-1">Combos</p>
+                <section className="d-flex flex-column">
+
+                    {combos.map((combo) => (
+                        <CardCombo background={combo.background} name={combo.name} price={combo.price} content={combo.content}/>
+                    ))}
+
+                    <SaborIntergalactico></SaborIntergalactico>
+                    <DoceAventuraEspacial></DoceAventuraEspacial>
                 </section>
             </div>
         </>

@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 
 export let totalExport = 0;
-export let refriExport;
 
 export default function Cart(){
 
@@ -41,14 +40,19 @@ export default function Cart(){
     return (
         <div className="container-sm">
             <p className="title fs-1">Carrinho</p>
-            {pizzas.length > 0 ? (
+            {pizzas.length <= 0 &&
+                <p>Carrinho vazio</p>
+            }
+            {pizzas.length > 0 && (
                 <>
-                    <section className="d-flex flex-wrap mt-5 pizzasFav">
+                
+                    <section className="d-flex flex-wrap justify-content-center mt-5 pizzasFav">
                         {pizzas.map((pizza, index) => (
                             <div className="pizzaFav d-flex my-3" key={index}>
                                 <img src={pizza.background} alt="" />
                                 <div className="m-3">
                                     <p className="fs-3">{pizza.name}</p>
+                                    <p>{pizza.config}</p>
                                     <span className="fs-4 price">R${pizza.price},00</span>
                                     <div className="d-flex">
                                         <i className="bi bi-dash-circle text-black fs-1 title cursor-pointer" onClick={() => updateQuant(index, '-')}></i>
@@ -59,6 +63,9 @@ export default function Cart(){
                             </div>
                         ))}
                     </section>
+
+
+
                     <p className='fs-4 title'>TOTAL: R${parseFloat(total).toFixed(2).toString().replace('.', ',')}</p>
                     <Link to='/endOrder' className='endOrder-link'>
                         <button className='endOrder'>
@@ -66,8 +73,6 @@ export default function Cart(){
                         </button>
                     </Link>
                 </>
-            ) : (
-                <p>Sem pizzas no carrinho</p>
             )}
         </div>
     );

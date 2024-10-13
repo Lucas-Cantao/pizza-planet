@@ -2,7 +2,15 @@ export let initialPizzas = []
 
 export let total = 0;
 export function addToCart(pizza) {
-    const pizzaExists = initialPizzas.some(item => item.name === pizza.name);
+    const pizzaExists = initialPizzas.some(item => {
+        if(item.name === pizza.name && item.config ===  pizza.config) {
+            return true
+        } else {
+            return false
+        }
+    });
+
+
 
     if (!pizzaExists) {
         initialPizzas.push(pizza);
@@ -34,7 +42,8 @@ function CardPizza({ background, name, price }) {
                 background: background,
                 name: name,
                 price: price,
-                quantidade: 1
+                quantidade: 1,
+                config: ''
             })}}>
                 Adicionar
                 <i className="bi bi-cart"></i>

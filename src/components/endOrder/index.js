@@ -4,36 +4,21 @@ import { initialPizzas } from '../home/carrocelPizzas/CardPizza';
 import { totalExport } from '../cart';
 
 
-function gerarCodigo() {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    let code = '';
-    const codeLength = 6;
-
-    for (let i = 0; i < codeLength; i++) {
-        const randomIndex = Math.floor(Math.random() * characters.length);
-        code += characters[randomIndex];
-    }
-
-    return code;
-}
-
-
 export default function EndOrder() {
 
     const [paymentType, setPaymentType] = useState('')
     const [troco, setTroco] = useState('nao')
     const [valorTroco, setValorTroco] = useState()
-    const [entrega, setEntrega] = useState()
-    const [rua, setRua] = useState()
-    const [numero, setNumero] = useState()
-    const [cidade, setCidade] = useState()
-    const [estado, setEstado] = useState()
-    const [refri,  setRefri] = useState()
+    // const [entrega, setEntrega] = useState()
+    // const [rua, setRua] = useState()
+    // const [numero, setNumero] = useState()
+    // const [cidade, setCidade] = useState()
+    // const [estado, setEstado] = useState()
     const [total,  setTotal] = useState(totalExport)
 
 
 
-    let endereco = `Rua: ${rua}, ${numero}, ${cidade} - ${estado}`
+    // let endereco = `Rua: ${rua}, ${numero}, ${cidade} - ${estado}`
 
 
     useEffect(()=>{
@@ -47,30 +32,22 @@ export default function EndOrder() {
         initialPizzas.forEach(pizza => {
             newTotal +=  pizza.price * pizza.quantidade
         })
-        if(refri){
-            newTotal += 2
-        }
         setTotal(newTotal)
-    }, [refri])
+    }, [total])
 
     function enviarPedido(e){
         e.preventDefault()
         let message = 'Pedido%0A'
         initialPizzas.forEach((pizza) => {
             message += `
-%0A${pizza.quantidade}x - *${pizza.name}*     |    R$${pizza.price.replace('.', ',')}un.
+%0A${pizza.quantidade}x - *${pizza.name}* ${pizza.config === '' ? '' : (' - ' + pizza.config)}     |    R$${pizza.price},00 - un.
 `
         })
 
         message += `
-%0A%0A%0AValor total do pedido: *R$${parseFloat(total).toFixed(2).toString().replace('.', ',')}*
+%0A%0A%0AValor total do pedido: *R$${total},00*
 %0AForma de pagamento: *${paymentType}*
 %0ATroco: *${troco === 'sim' ? valorTroco : 'não'}*
-%0ARefrigerante: *${refri === true ? 'sim' : 'não'}*
-
-%0A%0A%0ADados de entrega
-%0A%0AÉ para entrega: *${entrega === true ? ('sim, Endereço de entrega: ' + endereco) : 'não, para retirada'}*
-%0ACódigo para entrega: *${gerarCodigo()}*
 `
         
         window.location.assign(`https://api.whatsapp.com/send/?phone=5511919184905&text=${message}`)
@@ -217,16 +194,6 @@ export default function EndOrder() {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                 />
-                <label className="d-flex input-check my-5">
-                        <input
-                            type="checkbox"
-                            name="soda"
-                            id="soda"
-                            className="mx-2 form-check-input my-auto"
-                            onChange={e => setRefri(e.target.checked)}
-                        />
-                        <span htmlFor='soda'>Deseja adicionar um copo de refrigerante por apenas R$2,00?</span>
-                </label>
                 <p>Total: R${total},00</p>
                 {paymentType !== '' &&
                     <button className='endOrder-link' onClick={enviarPedido}>Finalizar pedido</button>

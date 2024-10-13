@@ -18,6 +18,12 @@
     background: linear-gradient(to bottom, #0094DA, #2FA7E3, #47B1E5, #6CBDE8, #97C7E4);
 }
 
+.pizzas::-webkit-scrollbar-track
+
+{
+    background: white;
+}
+
 .card-pizza
 
 {
@@ -54,7 +60,7 @@
     color: #1b29a6;
 }
 
-.card-pizza button
+.card-pizza button, .card-combo button
 
 {
     background: #ebee93;
@@ -62,14 +68,109 @@
     border: none;
     padding: .4vw;
     font-size: clamp(4px, calc(1vh + 1vw), 12px);
+    transition: .2s ease-out;
 }
 
-@media (width < 996px) {
+.card-combo button:hover
+
+{
+    scale: 1.1;
+}
+
+.card-combo
+
+{
+    width: 100%;
+    display: flex;
+    padding: 2vw;
+    gap: 4vw;
+}
+
+.combo-title
+
+{
+    background: #E60209;
+    color: #FFF245;
+    text-align: center;
+}
+
+.content-combo
+
+{
+    width: 60%;
+    color: #1b29a6;
+}
+
+.selects
+
+{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.select-pizzas
+
+{
+    width: 48%;
+}
+
+
+.card-combo img
+
+{
+    width: 35%;
+    height: inherit;
+}
+
+.select-pizzas input[type=radio]:checked ~ span, .content-combo input[type=radio]:checked ~ p 
+
+{
+    color: #FFF245;
+    background: #E60209;
+    scale: 1;
+}
+
+.select-pizzas div
+
+{
+    padding: 1vw;
+}
+
+
+.select-pizzas div label span, .content-combo div label p
+
+{
+    background: #ebee93;
+    padding: .6vw;
+    text-wrap: nowrap;
+    scale: 0.8;
+    transition: .2s ease-out;
+}
+
+
+@media (width < 992px) {
     .img-title
 
     {
         width: 70vw;
         height: 30vw;
+    }
+    .card-combo
+
+    {
+        flex-direction: column;
+    }
+
+    .card-combo img
+
+    {
+        width: 100%;
+        height: inherit;
+    }
+    .content-combo
+
+    {
+        width: 100%;
     }
 }
 
@@ -81,10 +182,31 @@
         height: 30vw;
     }
 
+
     ::-webkit-scrollbar
 
     {
         width: .7vw;
         height: .7vw;
+    }
+
+    .selects
+
+    {
+        flex-direction: column;
+    }
+    .select-pizzas
+
+    {
+        width: 100%;
+    }
+}
+
+@media (width < 320px) {
+    .footer-combo
+
+    {
+        align-items: center;
+        flex-direction: column;
     }
 }

@@ -1,6 +1,6 @@
 import '../../../styles/home/menu/index.css'
-import logo from '../../../assets/logo.png'
-import logoGiocatolli from '../../../assets/logo_.png'
+import logo from '../../../assets/et-pizza-planet.png'
+import logoGiocatolli from '../../../assets/logo.png'
 import { pizzas } from '../carrocelPizzas/Pizzas'
 import { addToCart } from '../carrocelPizzas/CardPizza'
 import {useEffect, useState} from 'react'
@@ -46,7 +46,7 @@ export default function Menu(){
                             <img src={pizza.background} alt="" />    
                             <div>
                                 <p key={index} className="m-2">{pizza.name}</p>
-                                <p key={index} className="m-2">R${pizza.price.toString().replace('.', ',')}</p>
+                                <p key={index} className="m-2">R${pizza.price},00</p>
                             </div>
                             <button onClick={()=>{addToCart(pizza)}}><i className="bi bi-cart"></i></button>
                         </div>
