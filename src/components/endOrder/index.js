@@ -3,6 +3,17 @@ import '../../styles/endOrder/index.css'
 import { initialPizzas } from '../home/carrocelPizzas/CardPizza';
 import { totalExport } from '../cart';
 
+function gerarCodigo(tamanho) {
+  const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  let codigo = '';
+  
+  for (let i = 0; i < tamanho; i++) {
+    const indiceAleatorio = Math.floor(Math.random() * caracteres.length);
+    codigo += caracteres[indiceAleatorio];
+  }
+
+  return codigo;
+}
 
 export default function EndOrder() {
 
@@ -37,7 +48,8 @@ export default function EndOrder() {
 
     function enviarPedido(e){
         e.preventDefault()
-        let message = '🧾Pedido%0A--------------------%0A'
+        const codigo = gerarCodigo(6)
+        let message = `🧾Pedido: ${codigo}%0A--------------------%0A`
         initialPizzas.forEach((pizza) => {
             message += `
 %0A------🍕${pizza.quantidade}x - *${pizza.name}* ${pizza.config === '' ? '' : (' - ' + pizza.config)}     |    R$${pizza.price},00 - un.
