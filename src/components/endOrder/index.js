@@ -49,7 +49,7 @@ export default function EndOrder() {
     function enviarPedido(e){
         e.preventDefault()
         const codigo = gerarCodigo(6)
-        let message = `🧾Pedido: ${codigo}%0A--------------------%0A`
+        let message = `🧾Pedido: ${codigo}%0A-------------------------------------------%0A`
         initialPizzas.forEach((pizza) => {
             message += `
 %0A------🍕${pizza.quantidade}x - *${pizza.name}* ${pizza.config === '' ? '' : (' - ' + pizza.config)}     |    R$${pizza.price},00 - un.
