@@ -54,6 +54,12 @@
     max-width: 200px;
 }
 
+.card-pizza div p
+
+{
+    font-size: clamp(4px, calc(1vh + 1vw), 12px);
+}
+
 .card-pizza span
 
 {
