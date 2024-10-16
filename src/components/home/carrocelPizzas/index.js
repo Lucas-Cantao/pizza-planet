@@ -37,7 +37,18 @@ function CarrocelPizzas(){
                 <p className="title fs-1">Pizzas limitadas</p>
                 <section className="d-flex flex-nowrap overflow-auto py-3">
                     {pizzasLimitadas.map((pizza) => (
-                        <CardPizza background={pizza.background} name={pizza.name} price={pizza.price}/>
+                        <div className="d-flex flex-column card-pizza justify-content-between mx-3">
+                            <img src={pizza.background} alt="" />
+                            <span>{pizza.name}</span>
+                            <div className='p-2 rounded-3 text-bg-primary d-flex flex-column align-items-center'>
+                                <p>
+                                    Disponível apenas no combo:
+                                </p>
+                                <p className='combo-title px-2'>
+                                    Sabor Intergaláctico
+                                </p>
+                            </div>
+                        </div>
                     ))
                 }
                 </section>
