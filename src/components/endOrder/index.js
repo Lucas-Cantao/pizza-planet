@@ -37,17 +37,20 @@ export default function EndOrder() {
 
     function enviarPedido(e){
         e.preventDefault()
-        let message = 'Pedido%0A'
+        let message = '🧾Pedido%0A--------------------%0A'
         initialPizzas.forEach((pizza) => {
             message += `
-%0A${pizza.quantidade}x - *${pizza.name}* ${pizza.config === '' ? '' : (' - ' + pizza.config)}     |    R$${pizza.price},00 - un.
+%0A------🍕${pizza.quantidade}x - *${pizza.name}* ${pizza.config === '' ? '' : (' - ' + pizza.config)}     |    R$${pizza.price},00 - un.
 `
         })
 
         message += `
-%0A%0A%0AValor total do pedido: *R$${total},00*
-%0AForma de pagamento: *${paymentType}*
-%0ATroco: *${troco === 'sim' ? valorTroco : 'não'}*
+%0A%0A%0A💰Valor total do pedido: *R$${total},00*
+%0A💳💵💠Forma de pagamento: *${paymentType}*
+%0A🪙Troco: *${troco === 'sim' ? valorTroco : 'não'}*
+%0A
+%0A
+%0A⚠⚠⚠Caso essa mensagem seja editada seu pedido será cancelado automaticamente, então apenas envie e aguarde o preparo. Gratos.⚠⚠⚠
 `
         
         window.location.assign(`https://api.whatsapp.com/send/?phone=5511919184905&text=${message}`)
