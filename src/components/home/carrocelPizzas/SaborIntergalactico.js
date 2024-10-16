@@ -81,7 +81,7 @@ export default function SaborIntergalactico(){
                     </label>
                 </div>
                 <div className="d-flex w-100 justify-content-around footer-combo">
-                    <p className="fs-4 text-danger my-auto">R$17,00</p>
+                    <p className="fs-4 text-danger my-auto">R$18,00</p>
                     <button className="rounded-3 py-2 px-4" onClick={() => {
                         if(bebida !== ''  && pizza1 !== '' && pizza2 !== ''){
                             addToCart({
