@@ -119,13 +119,13 @@ const combos = [
         background: senhoresCabecaDeBatata,
         name: 'Senhores cabeças de batata',
         content: 'O Combo Senhores Cabeça de Batata oferece duas deliciosas mini-pizzas para agradar a todos os gostos: uma mini-pizza Betty, coberta com chocolate e morango, e uma mini-pizza Buzz, com o sabor clássico de mussarela. O combo inclui ainda um suco ou refrigerante pequeno à escolha do cliente, perfeito para acompanhar essas opções saborosas.',
-        price: 15
+        price: 16
     },
     {
         background: amigoEstouAqui,
         name: 'Amigo estou aqui',
         content: 'O Combo Amigo Estou Aqui traz uma deliciosa mini-pizza Buzz, feita de mussarela, e uma mini-pizza Woody, preparada com saborosa calabresa. Para completar, o combo inclui uma bebida à sua escolha, seja um suco ou um refrigerante pequeno. Ideal para quem quer aproveitar sabores irresistíveis em um lanche prático!',
-        price: 15
+        price: 16
     }
 ]
 

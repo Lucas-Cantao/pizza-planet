@@ -87,7 +87,7 @@ export default function SaborIntergalactico(){
                             addToCart({
                                 background: saborIntergalactico,
                                 name: 'Sabor intergaláctico',
-                                price: 17,
+                                price: 18,
                                 quantidade: 1,
                                 config: `1 ${pizza1}  + 1 ${pizza2} + 1 ${bebida}`
                             })
