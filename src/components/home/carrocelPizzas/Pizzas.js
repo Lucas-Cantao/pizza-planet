@@ -117,7 +117,7 @@ const pizzasLimitadas = [
 const combos = [
     {
         background: senhoresCabecaDeBatata,
-        name: 'Senhores Cabeças de batata',
+        name: 'Senhores cabeças de batata',
         content: 'O Combo Senhores Cabeça de Batata oferece duas deliciosas mini-pizzas para agradar a todos os gostos: uma mini-pizza Betty, coberta com chocolate e morango, e uma mini-pizza Buzz, com o sabor clássico de mussarela. O combo inclui ainda um suco ou refrigerante pequeno à escolha do cliente, perfeito para acompanhar essas opções saborosas.',
         price: 15
     },

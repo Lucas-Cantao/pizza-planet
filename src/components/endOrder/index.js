@@ -72,14 +72,14 @@ export default function EndOrder() {
                         <input type="radio" id="pix" name="paymentType" value="pix" onChange={e => {setPaymentType(e.target.value)}}/>
                         <span htmlFor='paymentType'>Pix</span>
                     </label>
-                    <label>
+                    {/* <label>
                         <input type="radio" id="debito" name="paymentType" value="debito" onChange={e => {setPaymentType(e.target.value)}}/>
                         <span htmlFor='paymentType'>Débito</span>
                     </label>
                     <label>
                         <input type="radio" id="credito" name="paymentType" value="credito" onChange={e => {setPaymentType(e.target.value)}}/>
                         <span htmlFor='paymentType'>Crédito</span>
-                    </label>
+                    </label> */}
                 </section>
                 {paymentType === 'dinheiro' &&
                     <>
@@ -185,16 +185,16 @@ export default function EndOrder() {
                     </>
 
                 )} */}
-                <p>Por enquanto, não trabalhamos com delivery. Portanto, segue o endereço para retirada:</p>
-                <p>Endereço para retirada: Av. Paulista, 100 - São Paulo, SP</p>
+                <p className='m-0 mt-3'>Por enquanto, não trabalhamos com delivery. Portanto, segue o endereço para retirada:</p>
+                <p className='m-0 mb-3'>R. João Píres de Camargo, 207 - Jardim Mirna, Taboão da Serra - SP, 06790-240</p>
                 <iframe
-                    title="Google Maps - Av. Paulista, São Paulo"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197490458261!2d-46.65906922468111!3d-23.561349561591737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1728003511469!5m2!1spt-BR!2sbr"
+                    title="Projeto Uirapuru, Taboão da Serra"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.8431215381434!2d-46.7847261246793!3d-23.60995856337949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5759c9615f57%3A0xa21af1e7c22f67a0!2sProjeto%20Uirapuru!5e0!3m2!1spt-BR!2sbr!4v1729034123611!5m2!1spt-BR!2sbr"
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                 />
-                <p>Total: R${total},00</p>
+                <p className='my-5 fs-5'>Total: R${total},00</p>
                 {paymentType !== '' &&
                     <button className='endOrder-link' onClick={enviarPedido}>Finalizar pedido</button>
                 }

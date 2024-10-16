@@ -1,23 +1,31 @@
 import '../../../styles/home/cards/index.css'
-import frangoCatupiry from '../../../assets/pizza-frango-catupiry.jpg'
-import pizzaMussarela from '../../../assets/pizza-mussarela.jpg'
-import pizzaPortuguesa from '../../../assets/pizza-portuguesa.jpg'
-import pizzaCalabresa from '../../../assets/pizza-calabresa.jpeg'
+import senhoresCabecasDeBatata from '../../../assets/senhores-cabecas-de-batata.png'
+import amigoEstouAqui from '../../../assets/amigo-estou-aqui.png'
+import saborIntergalactico from '../../../assets/sabor-intergalactico.png'
+import doceAventuraEspacial from '../../../assets/doce-aventura-espacial.png'
 
 export default function Cards() {
     return (
         <div className="container-fluid d-flex images my-5">
             <div className="image">
-                <img src={frangoCatupiry} alt=""  className="img-fluid"/>
+                <a href="#Senhores cabeças de batata">
+                    <img src={senhoresCabecasDeBatata} alt=""  className="img-fluid"/>
+                </a>
             </div>
             <div className="image">
-                <img src={pizzaMussarela} alt=""  className="img-fluid"/>
+                <a href="#Amigo estou aqui">
+                    <img src={amigoEstouAqui} alt=""  className="img-fluid"/>
+                </a>
             </div>
             <div className="image">
-                <img src={pizzaPortuguesa} alt=""  className="img-fluid"/>
+                <a href="#Sabor intergalactico">
+                    <img src={saborIntergalactico} alt=""  className="img-fluid"/>
+                </a>
             </div>
             <div className="image">
-                <img src={pizzaCalabresa} alt=""  className="img-fluid"/>
+                <a href="#Doce aventura espacial">
+                    <img src={doceAventuraEspacial} alt=""  className="img-fluid"/>
+                </a>
             </div>
         </div>
     )

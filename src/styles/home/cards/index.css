@@ -7,11 +7,18 @@
 .images .image img
 
 {
-    width: 20vw;
-    height: 15vw;
+    width: 22vw;
+    height: 22vw;
     animation: pulse 2s ease infinite;
     border-radius: 7%;
+    transition: all .2s ease-out;
     
+}
+
+.images .image img:hover
+
+{
+    cursor: pointer;
 }
 
 .images .image:nth-child(2) img {

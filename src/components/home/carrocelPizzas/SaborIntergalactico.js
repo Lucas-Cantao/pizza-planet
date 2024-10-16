@@ -11,8 +11,8 @@ export default function SaborIntergalactico(){
 
 
     return (
-        <div className="card-combo bg-white m-4 rounded-5 mx-auto">
-            <img src={saborIntergalactico} alt=""  className="rounded-5"/>
+        <div className="card-combo bg-white m-4 mx-auto" id='Sabor intergalactico'>
+            <img src={saborIntergalactico} alt=""/>
             <section className="content-combo d-flex flex-column justify-content-evenly">
                 <div>
                     <p className="fs-1 combo-title">Sabor intergaláctico</p>
@@ -58,8 +58,8 @@ export default function SaborIntergalactico(){
                         </div>
                     </div>
                 </div>
-                <div className="d-flex">
-                    <label>
+                <div className="d-flex bebidas">
+                    <label className='cursor-pointer'>
                         <input
                             type="radio"
                             name='Sabor intergalactico'
@@ -67,9 +67,9 @@ export default function SaborIntergalactico(){
                             value='Coca 200ml'
                             onChange={(e)=>setBebida(e.target.value)}
                         />
-                        <p className='fs-5'>Coca 200ml</p>
+                        <p>Coca 200ml</p>
                     </label>
-                    <label>
+                    <label className='cursor-pointer'>
                         <input
                             type="radio"
                             name='Sabor intergalactico'
@@ -77,13 +77,13 @@ export default function SaborIntergalactico(){
                             value='Suco de laranja 300ml'
                             onChange={(e)=>setBebida(e.target.value)}
                         />
-                        <p className='fs-5'>Suco de laranja 300ml</p>
+                        <p>Suco de laranja 300ml</p>
                     </label>
                 </div>
                 <div className="d-flex w-100 justify-content-around footer-combo">
                     <p className="fs-4 text-danger my-auto">R$17,00</p>
                     <button className="rounded-3 py-2 px-4" onClick={() => {
-                        if(bebida !== ''  || pizza1 !== '' || pizza2 !== ''){
+                        if(bebida !== ''  && pizza1 !== '' && pizza2 !== ''){
                             addToCart({
                                 background: saborIntergalactico,
                                 name: 'Sabor intergaláctico',

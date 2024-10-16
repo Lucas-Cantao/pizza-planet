@@ -10,8 +10,8 @@ export default function DoceAventuraEspacial() {
     const [bebida, setBebida] = useState('')
 
     return (
-        <div className="card-combo bg-white m-4 rounded-5 mx-auto">
-            <img src={doceAventuraEspacial} alt=""  className="rounded-5"/>
+        <div className="card-combo bg-white m-4 mx-auto" id='Doce aventura espacial'>
+            <img src={doceAventuraEspacial} alt=""/>
             <section className="content-combo d-flex flex-column justify-content-evenly">
                 <div>
                     <p className="fs-1 combo-title">Doce aventura espacial</p>
@@ -57,32 +57,32 @@ export default function DoceAventuraEspacial() {
                         </div>
                     </div>
                 </div>
-                <div className="d-flex">
-                    <label>
+                <div className="d-flex bebidas">
+                    <label className='cursor-pointer'>
                         <input
                             type="radio"
-                            name="Doce aventura espacial"
+                            name='Sabor intergalactico'
                             className="d-none"
                             value='Coca 200ml'
                             onChange={(e)=>setBebida(e.target.value)}
                         />
-                        <p className='fs-5'>Coca 200ml</p>
+                        <p>Coca 200ml</p>
                     </label>
-                    <label>
+                    <label className='cursor-pointer'>
                         <input
                             type="radio"
-                            name="Doce aventura espacial"
+                            name='Sabor intergalactico'
                             className="d-none"
                             value='Suco de laranja 300ml'
                             onChange={(e)=>setBebida(e.target.value)}
                         />
-                        <p className='fs-5'>Suco de laranja 300ml</p>
+                        <p>Suco de laranja 300ml</p>
                     </label>
                 </div>
                 <div className="d-flex w-100 justify-content-around footer-combo">
                     <p className="fs-4 text-danger my-auto">R$17,00</p>
                     <button className="rounded-3 py-2 px-4" onClick={() => {
-                        if(bebida !== ''  || pizzaDoce1 !== '' || pizzaDoce2 !== ''){
+                        if(bebida !== ''  && pizzaDoce1 !== '' && pizzaDoce2 !== ''){
                             addToCart({
                                 background: doceAventuraEspacial,
                                 name: 'Doce aventura espacial',

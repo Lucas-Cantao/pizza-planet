@@ -67,7 +67,7 @@
     color: #1b29a6;
     border: none;
     padding: .4vw;
-    font-size: clamp(4px, calc(1vh + 1vw), 12px);
+    font-size: clamp(8px, calc(1vh + 1vw), 12px);
     transition: .2s ease-out;
 }
 
@@ -77,6 +77,18 @@
     scale: 1.1;
 }
 
+.bebidas
+
+{
+    font-size: clamp(8px, calc(1vh + 1vw), 12px);
+}
+
+.bebidas label
+
+{
+    margin: 4vw 1vw;
+}
+
 .card-combo
 
 {
@@ -84,6 +96,13 @@
     display: flex;
     padding: 2vw;
     gap: 4vw;
+    border-radius: 2vw;
+}
+
+.card-combo img
+
+{
+    border-radius: 2vw;
 }
 
 .combo-title
@@ -127,7 +146,6 @@
 {
     color: #FFF245;
     background: #E60209;
-    scale: 1;
 }
 
 .select-pizzas div
@@ -143,7 +161,6 @@
     background: #ebee93;
     padding: .6vw;
     text-wrap: nowrap;
-    scale: 0.8;
     transition: .2s ease-out;
 }
 
@@ -195,10 +212,25 @@
     {
         flex-direction: column;
     }
+    
+    
+    
     .select-pizzas
 
     {
         width: 100%;
+    }
+
+    .card-combo
+
+    {
+        padding: 4vw;
+    }
+
+    .card-combo, .card-combo img
+
+    {
+        border-radius: 4vw;
     }
 }
 
@@ -208,5 +240,17 @@
     {
         align-items: center;
         flex-direction: column;
+    }
+
+    .bebidas
+
+    {
+        flex-direction: column;
+    }
+
+    .bebidas label
+
+    {
+        margin: 0 1vw;
     }
 }
