@@ -3,17 +3,6 @@ import '../../styles/endOrder/index.css'
 import { initialPizzas } from '../home/carrocelPizzas/CardPizza';
 import { totalExport } from '../cart';
 
-function gerarCodigo(tamanho) {
-  const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-  let codigo = '';
-  
-  for (let i = 0; i < tamanho; i++) {
-    const indiceAleatorio = Math.floor(Math.random() * caracteres.length);
-    codigo += caracteres[indiceAleatorio];
-  }
-
-  return codigo;
-}
 
 export default function EndOrder() {
 
@@ -48,21 +37,17 @@ export default function EndOrder() {
 
     function enviarPedido(e){
         e.preventDefault()
-        const codigo = gerarCodigo(6)
-        let message = `🧾Pedido: *${codigo}*%0A-------------------------------------------%0A`
+        let message = 'Pedido%0A'
         initialPizzas.forEach((pizza) => {
             message += `
-%0A------🍕${pizza.quantidade}x - *${pizza.name}* ${pizza.config === '' ? '' : (' - ' + pizza.config)}     |    R$${pizza.price},00 - un.
+%0A${pizza.quantidade}x - *${pizza.name}* ${pizza.config === '' ? '' : (' - ' + pizza.config)}     |    R$${pizza.price},00 - un.
 `
         })
 
         message += `
-%0A%0A%0A💰Valor total do pedido: *R$${total},00*
-%0A💳💵💠Forma de pagamento: *${paymentType}*
-%0A🪙Troco: *${troco === 'sim' ? valorTroco : 'não'}*
-%0A
-%0A
-%0A⚠⚠⚠Caso essa mensagem seja editada seu pedido será cancelado automaticamente, então apenas envie e aguarde o preparo. Gratos.⚠⚠⚠
+%0A%0A%0AValor total do pedido: *R$${total},00*
+%0AForma de pagamento: *${paymentType}*
+%0ATroco: *${troco === 'sim' ? valorTroco : 'não'}*
 `
         
         window.location.assign(`https://api.whatsapp.com/send/?phone=5511919184905&text=${message}`)
@@ -136,6 +121,11 @@ export default function EndOrder() {
                         }
                     </>
                 }
+
+                {paymentType === 'pix' &&
+                    <p className='my-2'>O link para pagamento via pix será enviado assim que a nossa equipe confirmar seu pedido via Whatsapp</p>
+                }
+                
                 {/* <label className="mt-3">
                     <input
                         type="checkbox"
