@@ -57,38 +57,16 @@ export default function DoceAventuraEspacial() {
                         </div>
                     </div>
                 </div>
-                <div className="d-flex bebidas">
-                    <label className='cursor-pointer'>
-                        <input
-                            type="radio"
-                            name='Sabor intergalactico'
-                            className="d-none"
-                            value='Coca 200ml'
-                            onChange={(e)=>setBebida(e.target.value)}
-                        />
-                        <p>Coca 200ml</p>
-                    </label>
-                    <label className='cursor-pointer'>
-                        <input
-                            type="radio"
-                            name='Sabor intergalactico'
-                            className="d-none"
-                            value='Suco de laranja 300ml'
-                            onChange={(e)=>setBebida(e.target.value)}
-                        />
-                        <p>Suco de laranja 300ml</p>
-                    </label>
-                </div>
                 <div className="d-flex w-100 justify-content-around footer-combo">
                     <p className="fs-4 text-danger my-auto">R$17,00</p>
                     <button className="rounded-3 py-2 px-4" onClick={() => {
-                        if(bebida !== ''  && pizzaDoce1 !== '' && pizzaDoce2 !== ''){
+                        if(pizzaDoce1 !== '' && pizzaDoce2 !== ''){
                             addToCart({
                                 background: doceAventuraEspacial,
                                 name: 'Doce aventura espacial',
-                                price: 16,
+                                price: 17,
                                 quantidade: 1,
-                                config: `1 ${pizzaDoce1}  + 1 ${pizzaDoce2} + 1 ${bebida}`
+                                config: `1 ${pizzaDoce1}  + 1 ${pizzaDoce2}`
                             })
                             setBebida('')
                             setPizzaDoce1('')
